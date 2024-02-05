@@ -10,6 +10,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/ee/b88f337a/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2bwOeKNVsbMZmyVdbHvBQ3XC7aQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />

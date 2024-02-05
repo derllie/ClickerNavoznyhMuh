@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private bool mouseButtonPressed;
+    private bool keyboardButtonPressed;
+
     private static InputManager instance;
 
     private void Awake()
@@ -36,6 +38,18 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void KeyboardButtonPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            keyboardButtonPressed = true;
+        }
+        else if (context.canceled)
+        {
+            keyboardButtonPressed = false;
+        }
+    }
+
     // for any of the below 'Get' methods, if we're getting it then we're also using it,
     // which means we should set it to false so that it can't be used again until actually
     // pressed again.
@@ -43,6 +57,12 @@ public class InputManager : MonoBehaviour
     {
         bool result = mouseButtonPressed;
         mouseButtonPressed = false;
+        return result;
+    }
+    public bool GetKeyboardButtonPressed()
+    {
+        bool result = keyboardButtonPressed;
+        keyboardButtonPressed = false;
         return result;
     }
 
