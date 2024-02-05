@@ -323,7 +323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 430, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &229965322
@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5534970050758612020, guid: 2701c8e908ada8d42a5fb4d693bd0ea1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenBuffsShop
+      value: ShowPanel
       objectReference: {fileID: 0}
     - target: {fileID: 5534970050758612020, guid: 2701c8e908ada8d42a5fb4d693bd0ea1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -636,6 +636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc4f4a526aae0e4693eb904a4ad0d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopBuffsPanel: {fileID: 162790332}
+  showBuffsPanelButton: {fileID: 1219945497}
+  hideBuffsPanelButton: {fileID: 1114357943}
+  xMoveShow: 10
+  xMoveHide: 430
 --- !u!1001 &275548228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2342,7 +2347,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 265110649}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: CloseBuffsShop
+        m_MethodName: HidePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2352,6 +2357,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1219945497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5534970050758612020, guid: 2701c8e908ada8d42a5fb4d693bd0ea1, type: 3}
+  m_PrefabInstance: {fileID: 229965322}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238910944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6031977283279715490, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
@@ -2479,23 +2495,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6786364153119411331, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6786364153119411331, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6786364153119411331, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 13.41
       objectReference: {fileID: 0}
     - target: {fileID: 6786364153119411331, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 96.14
       objectReference: {fileID: 0}
     - target: {fileID: 6786364153119411331, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -11.705
       objectReference: {fileID: 0}
     - target: {fileID: 7702861127397369326, guid: 93b998b8eddf52c458cea33db62ff2bb, type: 3}
       propertyPath: m_IsActive
