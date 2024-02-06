@@ -36,7 +36,7 @@ public class MultiplierBuff : MonoBehaviour
     private void Start()
     {
         priceText.text = price + " clicks";
-        multiplierText.text = "+" + multiplier;
+        multiplierText.text = "МНОЖИТЕЛЬ х" + multiplier;
         UpdateButtonInteractable(); 
     }
 

@@ -7,13 +7,14 @@ using UnityEngine;
 public class ClickHandler : MonoBehaviour
 { 
     [SerializeField] private TextMeshProUGUI counterText;
+    [SerializeField] private TextMeshProUGUI multiplierText;
 
     private void Start()
     {
-        counterText.text = "Clicks: " + GameManager.Clicks;
+        counterText.text = "CLICKS: " + GameManager.Clicks;
+        multiplierText.text = "MULTIPLIER: " + GameManager.Multiplier;
         Events.ClicksUpdated += OnClicksUpdated;
     }
-
     public void Increment()
     {
         GameManager.Clicks += GameManager.Multiplier;
@@ -23,7 +24,8 @@ public class ClickHandler : MonoBehaviour
 
     private void OnClicksUpdated()
     {
-        counterText.text = "Clicks: " + GameManager.Clicks;
+        counterText.text = "CLICKS: " + GameManager.Clicks;
+        multiplierText.text = "MULTIPLIER: " + GameManager.Multiplier;
     }
 
 }
