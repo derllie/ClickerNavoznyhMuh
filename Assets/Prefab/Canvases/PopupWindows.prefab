@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+ master
 --- !u!1 &492346897193482603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2978,6 +2979,8 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+
+ master
 --- !u!1 &8666543407041212851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3085,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+ master
 --- !u!1 &8669312687256358875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,3 +3311,5 @@ MonoBehaviour:
   infoText: 
   header: {fileID: 0}
   info: {fileID: 0}
+
+ master

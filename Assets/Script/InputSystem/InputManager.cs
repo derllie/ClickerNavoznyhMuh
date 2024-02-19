@@ -6,8 +6,11 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class InputManager : MonoBehaviour
 {
+    private Vector2 pointerPos = Vector2.zero;
+    
     private bool mouseButtonPressed;
     private bool keyboardButtonPressed;
+    private bool isDragging;
 
     private static InputManager instance;
 
@@ -25,6 +28,43 @@ public class InputManager : MonoBehaviour
         return instance;
     }
 
+    public void OnDrag(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isDragging = true;
+        }
+        else if (context.canceled)
+        {
+            isDragging = false;
+        }
+    }
+    
+    public bool IsDragging()
+    {
+        Debug.Log("is dragging");
+        bool result = isDragging;
+        isDragging = false;
+        return result;
+    }
+    
+    
+    public void OnPointer(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            pointerPos = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            pointerPos = context.ReadValue<Vector2>();
+        }
+    }
+
+    public Vector2 GetPointerPos()
+    {
+        return pointerPos;
+    }
 
     public void MouseButtonPressed(InputAction.CallbackContext context)
     {
